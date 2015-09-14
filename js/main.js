@@ -16,30 +16,27 @@ $(document).ready(function() {
     //         '</div>');
     // });
 
-    $("form#new-place").submit(function(event) {
+    $("form#new-task").submit(function(event) {
         event.preventDefault();
 
-        var inputtedLocale = $("input#new-locale").val();
-        var inputtedYear = $("input#new-year").val();
+        var inputtedTaskName = $("input#new-taskName").val();
 
-        var newPlace = {
-            locale: inputtedLocale,
-            year: inputtedYear,
-            details: []
+        var newTask = {
+            taskName: inputtedTaskName,
+            taskDetails: []
         };
 
-        $(".new-detail").each(function() {
-            var inputtedLandmark = $(this).find("input.new-landmark").val();
-            var inputtedHilite = $(this).find("input.new-hilite").val();
-            var inputtedNotes = $(this).find("input.new-note").val();
+        $(".new-taskDetails").each(function() {
+            var inputtedDescription = $(this).find("input.new-description").val();
+            var inputtedDueDate = $(this).find("input.new-dueDate").val();
 
-            var newDetail = {
-                landmark: inputtedLandmark,
-                highlight: inputtedHilite,
-                notes: inputtedNotes
+            var newTaskDetails = {
+                description: inputtedDescription,
+                dueDate: inputtedDueDate
             };
-            newPlace.details.push(newDetail);
+            newTask.taskDetails.push(newTaskDetails);
         });
+        console.log(newTask);
 
         $("ul#places").append("<li><span class='place'>" + newPlace.locale + " " + newPlace.year + "</span></li>");
 
