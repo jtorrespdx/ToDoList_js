@@ -1,8 +1,8 @@
-# _Places you have been!_
-## _Enter details about travel and recall details, 9/13/2015_
+# _To Do list_
+## _Enter details about tasks and mark when complete, 9/13/2015_
 ### By Charles Moss, Jose Torres
 ## Description
-_User enters locale, year, landmarks, highlights, and notes. Outputs a list by local/year that can be expaned to show other details._
+_User enters tasks and pertaining details. Outputs a list by task that can be expanded to show it's details. It then allows user to mark it as completed._
 
 ## Setup
 _Clone and open index.html in your browser._  
