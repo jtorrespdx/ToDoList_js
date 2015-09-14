@@ -106,12 +106,21 @@ aside h2 {
     font-weight: 200;
 }
 
-.task {
+.taskNotCompleted {
   cursor: pointer;
   color: #0088cc;
 }
 
-.task:hover {
+.taskCompleted {
+  cursor: pointer;
+  color: red;
+}
+
+.taskCompleted:after {
+  content: " √ "
+}
+
+.clickable:hover {
   text-decoration: underline;
 }
 

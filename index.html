@@ -43,8 +43,8 @@
                         <div "form__group" id="new-taskDetails">
                             <div class="new-taskDetails">
 
-                                <label class="form__label" for="new-description">What needs to be done?</label>
-                                <input class="form__input new-description" type="text">
+                                <label class="form__label" for="new-desc">What needs to be done?</label>
+                                <input class="form__input new-desc" type="text">
 
                                 <label class="form__label" for="new-dueDate">When does this need to be done by?</label>
                                 <input class="form__input new-dueDate" type="text">
@@ -61,10 +61,12 @@
                 </article>
 
                 <aside class="">
+                    <div id="taskList">
+
 
                     <h2>Tasks:</h2>
                     <ul id="notCompleted"></ul>
-                    <ul id="completed"></ul>
+                    </div>
                     <div>
                         <div id="show-task">
                             <h2></h2>
@@ -78,6 +80,7 @@
 
                                 </ul>
                             </p>
+                            <button id="done"  > √ </button>
                         </div>
                     </div>
 

@@ -27,36 +27,39 @@ $(document).ready(function() {
         };
 
         $(".new-taskDetails").each(function() {
-            var inputtedDescription = $(this).find("input.new-description").val();
+            var inputtedDescription = $(this).find("input.new-desc").val();
             var inputtedDueDate = $(this).find("input.new-dueDate").val();
 
             var newTaskDetails = {
-                description: inputtedDescription,
+                desc: inputtedDescription,
                 dueDate: inputtedDueDate
             };
             newTask.taskDetails.push(newTaskDetails);
         });
         console.log(newTask);
 
-        $("ul#places").append("<li><span class='place'>" + newPlace.locale + " " + newPlace.year + "</span></li>");
+        $("ul#notCompleted").append("<li><span class='taskNotCompleted clickable'>" + newTask.taskName + "</span></li>");
 
-        $(".place").last().click(function() {
-            $("#show-place").show();
+        // $("ul#completed").append("<li><span class='taskCompleted'>" + newTask.taskName + "</span></li>");
 
-            $("#show-place h2").text(newPlace.locale);
-            $(".locale").text(newPlace.locale);
-            $(".year").text(newPlace.year);
+        $( "#done" ).click(function() {
+            $( ".taskNotCompleted" ).removeClass('taskNotCompleted').addClass('taskCompleted');
+        });
 
-            $("ul#details").text("");
-            newPlace.details.forEach(function(detail) {
-                $("ul#details").append("<li>" + detail.landmark + ", " + detail.highlight + ", " + detail.notes + "</li>");
+        $("#taskList ul").click(function() {
+            $("#show-task").show();
+
+            $("#show-task h2").text(newTask.taskName);
+            $(".taskName").text(newTask.taskName);
+
+            $("ul#taskDetails").text("");
+            newTask.taskDetails.forEach(function(taskDetails) {
+                $("ul#taskDetails").append("<li>" + taskDetails.desc + ", " + taskDetails.dueDate + "</li>");
             });
         });
 
-        $("input#new-locale").val("");
-        $("input#new-year").val("");
-        $("input.new-landmark").val("");
-        $("input.new-hilite").val("");
-        $("input.new-note").val("");
+        $("input#new-taskName").val("");
+        $("input.new-desc").val("");
+        $("input.new-dueDate").val("");
     });
 });
