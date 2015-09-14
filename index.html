@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+        <title></title>
+
+        <meta content="" name="description">
+        <meta content="width=device-width" name="viewport">
+
+        <link href="css/main.css" rel="stylesheet">
+
+    </head>
+
+    <body>
+
+        <div class="wrapper">
+
+            <header>
+
+                <h1 class="site__title">To Do List</h1>
+
+            </header>
+
+            <section class="main group">
+
+                <article class="main__article">
+
+                    <h2 class="main__title">Add a task:</h2>
+
+                    <form class="main__form" id="new-task">
+                        <div class="form__group">
+                            <label class="form__label" for="new-taskName">What?</label>
+                            <input class="form__input" id="new-tasName" type="text">
+
+                            <!-- <label class="form__label" for="new-taskDetail">Details</label>
+                            <input class="form__input" id="new-taskDetail" type="text"> -->
+
+                        </div>
+
+                        <div "form__group" id="new-taskDetails">
+                            <div class="new-taskDetail">
+
+                                <label class="form__label" for="new-description">Details about what needs to be done</label>
+                                <input class="form__input new-landmark" type="text">
+
+                                <label class="form__label" for="new-dueDate">When does this need to be done by?</label>
+                                <input class="form__input new-dueDate" type="text">
+
+                                <!-- <label class="form__label" for="new-note">Notes</label>
+                                <input class="form__input new-note" type="text"> -->
+
+                            </div>
+                        </div>
+
+                        <button class="form__btn" type="submit">Add</button>
+                    </form>
+
+                </article>
+
+                <aside class="">
+
+                    <h2>Tasks:</h2>
+                    <ul id="notCompleted"></ul>
+                    <ul id="completed"></ul>
+                    <div>
+                        <div id="show-task">
+                            <h2></h2>
+
+                            <p>Task:
+                                <span class="taskName"></span>
+                            </p>
+
+                            <p>Details:
+                                <ul id="taskDetails">
+
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+
+                </aside>
+
+            </section>
+
+        </div><!-- end of wrapper -->
+
+        <footer class="site__footer">
+
+            <div class="footer__content">
+
+                <p>
+                    Copyright 2015 - see my lawyer for details
+                </p>
+
+            </div>
+
+        </footer>
+
+        <script src="js/jquery.min.js"></script>
+        <script src="js/main.js"></script>
+        <script type="text/javascript"></script>
+    </body>
+
+</html>
