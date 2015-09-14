@@ -90,7 +90,7 @@ aside {
 
 /* content =================== */
 
-/* ================== contacts */
+/* ================== to do */
 
 #show-task {
   display: none;
@@ -122,6 +122,19 @@ aside h2 {
 
 .clickable:hover {
   text-decoration: underline;
+}
+
+.done__btn {
+    background: #f5f2f0;
+    border-radius: 4px;
+    border: 1px solid #d6cac2;
+    color: #b7a294;
+    padding: 6px 8px;
+    font-size: .8em;
+}
+
+.done__btn:hover {
+    color: red;
 }
 
 
